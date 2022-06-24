@@ -75,7 +75,7 @@ function colors(color) {
    case "blue":
     return "This is blue";
    case "red":
-    return "  This is red";
+    return "This is red";
    case "green":
     return "This is green";
    case "orange":
@@ -124,6 +124,7 @@ function fizzBuzz(numero) {
   if (numero % 5 === 0){
     return "buzz";
   }
+  return numero;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -139,7 +140,7 @@ function operadoresLogicos(num1, num2, num3) {
   else if (num1 < 0 || num2 < 0 || num3 < 0){
     return "Hay negativos";
   }
-  else if (num1>num2 && num1>num3 && num1>0){
+  else if (num1 > 0 && num1 > num2 && num1 > num3){
     return "Numero 1 es mayor y positivo";
   }
   else if (num3>num1 && num3>num2){
@@ -174,7 +175,7 @@ function esVerdadero(valor){
     return "Soy verdadero";
   }
   else{
-    return "Soy false";
+    return "Soy falso";
   }
 }
 
@@ -192,13 +193,10 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if(-1000<numero<1000){
+  if( numero > 99 && numero < 1000){
     return true;
   }
-  else{
     return false;
-  }
-  
 }
 
 function doWhile(numero) {
@@ -206,12 +204,12 @@ function doWhile(numero) {
   //Retornar el valor final.
   //Usar el bucle do ... while.
   var i = 0;
-  var a = numero;
+  var suma = numero;
   do {
     i = i +1;
-    a = 5 + a;
-   } while(i < 9);
-  return a;
+    suma = suma + 5;
+   } while(i < 8);
+  return suma;
 }
 
 
